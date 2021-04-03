@@ -141,11 +141,13 @@ namespace GitHub_Test_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
             this.ClientSize = new System.Drawing.Size(242, 450);
             this.Controls.Add(this.nudNumber2);
             this.Controls.Add(this.nudNumber1);
             this.Controls.Add(this.txtSum);
             this.Controls.Add(this.lblSum);
+            this.Controls.Add(this.txtSum);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.lblNumber2);
             this.Controls.Add(this.lblNumber1);
