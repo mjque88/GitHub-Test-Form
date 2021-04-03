@@ -21,5 +21,25 @@ namespace GitHub_Test_Form
         {
             Environment.Exit(1);
         }
+
+        private void txtNumber1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNumber2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSum_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
