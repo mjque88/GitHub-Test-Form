@@ -1,2 +1,4 @@
 # GitHub-Test-Form
-Windows GitHub test form with close button
+Windows GitHub test form
+
+This form can add 2 numbers together
