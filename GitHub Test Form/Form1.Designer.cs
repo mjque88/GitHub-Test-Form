@@ -29,25 +29,27 @@ namespace GitHub_Test_Form
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnClose = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.lblNumber1 = new System.Windows.Forms.Label();
             this.lblNumber2 = new System.Windows.Forms.Label();
             this.btnCalculate = new System.Windows.Forms.Button();
             this.lblSum = new System.Windows.Forms.Label();
             this.txtSum = new System.Windows.Forms.TextBox();
-            this.txtNumber1 = new System.Windows.Forms.TextBox();
-            this.txtNumber2 = new System.Windows.Forms.TextBox();
+            this.nudNumber1 = new System.Windows.Forms.NumericUpDown();
+            this.nudNumber2 = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumber1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumber2)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnClose
+            // btnExit
             // 
-            this.btnClose.Location = new System.Drawing.Point(27, 338);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(160, 100);
-            this.btnClose.TabIndex = 0;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnExit.Location = new System.Drawing.Point(40, 338);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(160, 100);
+            this.btnExit.TabIndex = 0;
+            this.btnExit.Text = "E&xit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // lblNumber1
             // 
@@ -69,11 +71,11 @@ namespace GitHub_Test_Form
             // 
             // btnCalculate
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(27, 216);
+            this.btnCalculate.Location = new System.Drawing.Point(40, 211);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(160, 100);
             this.btnCalculate.TabIndex = 3;
-            this.btnCalculate.Text = "Calculate";
+            this.btnCalculate.Text = "&Calculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
             this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
@@ -91,41 +93,69 @@ namespace GitHub_Test_Form
             this.txtSum.Location = new System.Drawing.Point(40, 160);
             this.txtSum.Name = "txtSum";
             this.txtSum.ReadOnly = true;
-            this.txtSum.Size = new System.Drawing.Size(100, 20);
+            this.txtSum.Size = new System.Drawing.Size(160, 20);
             this.txtSum.TabIndex = 5;
             this.txtSum.TextChanged += new System.EventHandler(this.txtSum_TextChanged);
             // 
-            // txtNumber1
+            // nudNumber1
             // 
-            this.txtNumber1.Location = new System.Drawing.Point(40, 56);
-            this.txtNumber1.Name = "txtNumber1";
-            this.txtNumber1.Size = new System.Drawing.Size(100, 20);
-            this.txtNumber1.TabIndex = 6;
-            this.txtNumber1.TextChanged += new System.EventHandler(this.txtNumber1_TextChanged);
+            this.nudNumber1.DecimalPlaces = 3;
+            this.nudNumber1.Location = new System.Drawing.Point(40, 56);
+            this.nudNumber1.Maximum = new decimal(new int[] {
+            -1530494976,
+            232830,
+            0,
+            0});
+            this.nudNumber1.Minimum = new decimal(new int[] {
+            -1530494976,
+            232830,
+            0,
+            -2147483648});
+            this.nudNumber1.Name = "nudNumber1";
+            this.nudNumber1.Size = new System.Drawing.Size(120, 20);
+            this.nudNumber1.TabIndex = 6;
+            this.nudNumber1.ThousandsSeparator = true;
+            this.nudNumber1.ValueChanged += new System.EventHandler(this.nudNumber1_ValueChanged);
             // 
-            // txtNumber2
+            // nudNumber2
             // 
-            this.txtNumber2.Location = new System.Drawing.Point(40, 106);
-            this.txtNumber2.Name = "txtNumber2";
-            this.txtNumber2.Size = new System.Drawing.Size(100, 20);
-            this.txtNumber2.TabIndex = 7;
-            this.txtNumber2.TextChanged += new System.EventHandler(this.txtNumber2_TextChanged);
+            this.nudNumber2.DecimalPlaces = 3;
+            this.nudNumber2.Location = new System.Drawing.Point(40, 106);
+            this.nudNumber2.Maximum = new decimal(new int[] {
+            -1530494976,
+            232830,
+            0,
+            0});
+            this.nudNumber2.Minimum = new decimal(new int[] {
+            -1530494976,
+            232830,
+            0,
+            -2147483648});
+            this.nudNumber2.Name = "nudNumber2";
+            this.nudNumber2.Size = new System.Drawing.Size(120, 20);
+            this.nudNumber2.TabIndex = 7;
+            this.nudNumber2.ThousandsSeparator = true;
+            this.nudNumber2.ValueChanged += new System.EventHandler(this.nudNumber2_ValueChanged);
             // 
             // frmGitHub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(208, 450);
-            this.Controls.Add(this.lblNumber1);
-            this.Controls.Add(this.txtNumber1);
-            this.Controls.Add(this.lblNumber2);
-            this.Controls.Add(this.txtNumber2);
+
+            this.ClientSize = new System.Drawing.Size(242, 450);
+            this.Controls.Add(this.nudNumber2);
+            this.Controls.Add(this.nudNumber1);
+            this.Controls.Add(this.txtSum);
             this.Controls.Add(this.lblSum);
             this.Controls.Add(this.txtSum);
             this.Controls.Add(this.btnCalculate);
-            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.lblNumber2);
+            this.Controls.Add(this.lblNumber1);
+            this.Controls.Add(this.btnExit);
             this.Name = "frmGitHub";
             this.Text = "GitHub Test Form";
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumber1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumber2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,14 +163,14 @@ namespace GitHub_Test_Form
 
         #endregion
 
-        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblNumber1;
         private System.Windows.Forms.Label lblNumber2;
         private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.Label lblSum;
         private System.Windows.Forms.TextBox txtSum;
-        private System.Windows.Forms.TextBox txtNumber1;
-        private System.Windows.Forms.TextBox txtNumber2;
+        private System.Windows.Forms.NumericUpDown nudNumber1;
+        private System.Windows.Forms.NumericUpDown nudNumber2;
     }
 }
 

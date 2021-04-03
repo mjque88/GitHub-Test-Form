@@ -17,19 +17,9 @@ namespace GitHub_Test_Form
             InitializeComponent();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             Environment.Exit(1);
-        }
-
-        private void txtNumber1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNumber2_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void txtSum_TextChanged(object sender, EventArgs e)
@@ -38,6 +28,21 @@ namespace GitHub_Test_Form
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)
+        {
+            decimal Number1 = Convert.ToDecimal(nudNumber1.Text);
+            decimal Number2 = Convert.ToDecimal(nudNumber2.Text);
+            decimal Sum = Number1 + Number2;
+
+            txtSum.Text = Sum.ToString();
+            txtSum.Focus();
+        }
+
+        private void nudNumber1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nudNumber2_ValueChanged(object sender, EventArgs e)
         {
 
         }
